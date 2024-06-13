@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background: #333;
+    background: rgb(0, 140, 255);
     color: #fff;
     padding: 1em 0;
 }
@@ -49,4 +49,15 @@ th, td {
 th {
     background-color: #333;
     color: white;
+}
+.post{
+    background-color: yellow;
+    padding 20px;
+    margin-top: 10px;
+    
+}
+.columnaIzquierda{
+    float: left;
+    width: 70%;
+    margin-left: 1%;
 }
