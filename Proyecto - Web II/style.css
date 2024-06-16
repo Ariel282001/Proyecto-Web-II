@@ -58,6 +58,17 @@ th {
 }
 .columnaIzquierda{
     float: left;
-    width: 70%;
+    width: 45%;
+    margin-left: 1%;
+}
+.post2{
+    background-color: yellow;
+    padding 20px;
+    margin-top: 10px;
+    
+}
+.columnaDerecha{
+    float: left;
+    width: 45%;
     margin-left: 1%;
 }
