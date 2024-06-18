@@ -29,6 +29,9 @@ nav ul li a {
 
 main {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 table {
@@ -50,14 +53,48 @@ th {
     background-color: #333;
     color: white;
 }
-.post{
+
+.post {
     background-color: yellow;
-    padding 20px;
+    padding: 20px;
     margin-top: 10px;
-    
 }
-.columnaIzquierda{
-    float: left;
+
+.columnaIzquierda {
     width: 70%;
     margin-left: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .columnaIzquierda {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* Añadir estilos específicos para about.html */
+.about-page {
+    margin: 0;
+    padding: 50;
+    width: 10%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.about-page #animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 85%;
+}
+
+.about-page canvas {
+    border: 1px solid rgb(26, 29, 28);
+    background-color: rgb(251, 251, 251);
 }
