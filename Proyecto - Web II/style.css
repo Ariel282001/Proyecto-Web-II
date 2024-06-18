@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background: rgb(0, 140, 255);
+    background: rgba(13, 39, 233, 0.779);
     color: #fff;
     padding: 1em 0;
 }
@@ -50,37 +50,70 @@ th {
     background-color: #333;
     color: white;
 }
-.post{
-    background-color: yellow;
-    padding 20px;
-    margin-top: 10px;
-    
-}
-.columnaIzquierda{
-    float: left;
-    width: 45%;
-    margin-left: 1%;
-}
-.post2{
-    background-color: yellow;
-    padding 20px;
-    margin-top: 10px;
-    
-}
-.columnaDerecha{
-    float: left;
-    width: 45%;
-    margin-left: 1%;
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
-/* Añadir estilos específicos para about.html */
+.columna {
+   flex: 1;
+    margin: 10px;
+    max-width: 45%;
+    text-align: left;
+    color: #000000;
+}
+
+.post, .post2 {
+    background-color: #ebeb1aef;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.imagen img {
+    max-width: 100%;
+    height: 80;
+    border-radius: 5px;
+}
+
+.video iframe {
+    width: 100%;
+    height: 100;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .columna {
+        max-width: 500%;
+    }
+
+    .video iframe {
+        height: 300px;
+    }
+}
+
+.main {
+    background-image: url('IMGs/Baloncesto.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Estilos específicos para about.html */
 .about-page {
     margin: 0;
-    padding: 50;
-    width: 10%;
-    height: 10%;
-    justify-content: center;
-    align-items: center;
+    padding: 50px; /* Agregado px para que sea una unidad valida */
+    width: 100%; /* Cambiado a 100% para que ocupe el ancho completo */
+    height: auto; /* Cambiado a auto para ajustar la altura segun el contenido */
+    display: flex; /* Agregado para centrar el contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
     background-color: #ffffff;
 }
 
@@ -95,4 +128,69 @@ th {
 .about-page canvas {
     border: 1px solid rgb(26, 29, 28);
     background-color: rgb(251, 251, 251);
+}
+.products-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 80%;
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Limitar la altura de las imagenes */
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    object-fit: cover; /* Asegurar que las imágenes mantengan proporciones */
+}
+
+.price {
+    font-size: 1.5em;
+    color: #333;
+    margin: 0;
+}
+
+.description {
+    font-size: 1em;
+    color: #777;
+    margin-top: 10px;
+    text-align: justify; /* Justificar el texto */
+}
+
+/* Ajustar ancho de parrafos para dividir en lineas */
+.product p {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.cart-container {
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container img {
+    width: 50%;
+    height: 50%;
+    border-radius: 30%;
 }
