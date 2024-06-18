@@ -29,6 +29,81 @@ nav ul li a {
 
 main {
     padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+.post{
+    background-color: yellow;
+    padding 20px;
+    margin-top: 10px;
+    
+}
+.columnaIzquierda{
+    float: left;
+    width: 45%;
+    margin-left: 1%;
+}
+.post2{
+    background-color: yellow;
+    padding 20px;
+    margin-top: 10px;
+    
+}
+.columnaDerecha{
+    float: left;
+    width: 45%;
+    margin-left: 1%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: rgb(0, 140, 255);
+    color: #fff;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
