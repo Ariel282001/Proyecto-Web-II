@@ -3,60 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros</title>
+    <title>Página Principal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="about.html">Historia</a></li>
-                <li><a href="products.html">Productos</a></li>
+                <li><a href="index.html">Inicio</a></li>|
+                <li><a href="about.html">Historia</a></li>|
+                <li><a href="products.html">Productos</a></li>|
                 <li><a href="contact.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
+    
 
-    <div class="cart-container">
-        <img src="IMGs/Cart.jpg.jpg">
-    </div>
+    <!-- Botón para abrir el modal -->
+        
+    <img src="IMGs/Carrito.jpg" alt="Carrito" id="open-cart" class="IconoCarrito">
 
-    <main>
-        <h1>Productos</h1>
-        <p>Descripción de los productos que tenemos disponibles.</p>
-    </main> 
+    <!-- Cars de Producctos -->
+    <div class="container">
+        <h1>Carrito de Compras</h1>
 
-        <div class="products-container">
-            <div class="product">
-                <img src="IMGs/Shorts.jpg", alt="Imagen de los Pantalones Cortos de la Edición 2022/2023 del Golden State Warriors de Jordan Brand">
-                <p class="price">$79.99</p>
-                <p class="description">Pantalones Cortos de la Edición 2022/2023  del Golden State Warriors de Jordan Brand</p>
+        
+
+        <!-- Productos -->
+        <div class="products">
+            <div class="product" >
+                <img src="IMGs/Tshirt.jpg" alt="Camiseta" onclick="openModal('jshdsahdjkshadkjsahdjkshadkjh')">
+                <h2>Camiseta Negra de Equipo</h2>
+                <p>Precio: $50</p>
+                <button onclick="addToCart('Producto 1', 50)" class="BotonModalCarrito">Agregar al Carrito</button>
             </div>
-            <div class="product">
-                <img src="IMGs/Tshirt.jpg" alt="Imagen de la Camiseta Fanatics Negra del Golden State Warriors">
-                <p class="price">$39.99</p>
-                <p class="description">Camiseta Fanatics Negra del Golden State Warriors</p>
+            <div class="product" >
+                <img src="IMGs/Basketball.jpg" alt="Balon de Basketball" onclick="openModal('jshdsahdjkshadkjsahdjkshadkjh')">
+                <h2>Balon de Basketball</h2>
+                <p>Precio: $75</p>
+                <button onclick="addToCart('Producto 2', 75)" class="BotonModalCarrito">Agregar al Carrito</button>
             </div>
-            <div class="product">
-                <img src="IMGs/Basketball.jpg" alt="Imagen del Balón de Baloncesto Autografiado por Klay Thompson">
-                <p class="price">$389.99</p>
-                <p class="description">Balón de Baloncesto Autografiado por Klay Thompson</p>
+            <div class="product" >
+                <img src="IMGs/Basketball.jpg" alt="Balon de Basketball" onclick="openModal('jshdsahdjkshadkjsahdjkshadkjh')">
+                <h2>Balon de Basketball</h2>
+                <p>Precio: $75</p>
+                <button onclick="addToCart('Producto 2', 75)" class="BotonModalCarrito">Agregar al Carrito</button>
             </div>
-            <div class="product">
-                <img src="IMGs/Hat.jpg" alt="Imagen del Sombrero del Golden State Warriors">
-                <p class="price">$29.99</p>
-                <p class="description">Sombrero del Golden State Warriors</p>
+            <div class="product" >
+                <img src="IMGs/Basketball.jpg" alt="Balon de Basketball" onclick="openModal('jshdsahdjkshadkjsahdjkshadkjh')">
+                <h2>Balon de Basketball</h2>
+                <p>Precio: $75</p>
+                <button onclick="addToCart('Producto 2', 75)" class="BotonModalCarrito">Agregar al Carrito</button>
             </div>
-            <div class="product">
-                <img src="IMGs/Hoodie.jpg" alt="Imagen de la Sudadera del Golden State Warriors">
-                <p class="price">$59.99</p>
-                <p class="description">Sudadera del Golden State Warriors</p>
+            
+            
+          
+          
+            <!-- Puedes agregar más productos aquí -->
+        </div>
+
+        <!-- Modal del Carrito -->
+        <div id="cart-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Carrito de Compras</h2>
+                <ul id="cart-items">
+                    <!-- Los elementos del carrito se añadirán dinámicamente aquí -->
+                </ul>
+                <p>Total: <span id="cart-total">$0</span></p>
+                <button onclick="clearCart()" class="Vaciar">Vaciar Carrito</button>
             </div>
         </div>
- 
-    <script src="script.js"></script>
+    </div>
 
+
+     <!-- Modal de Informacion de Productos -->
+     <div id="producto-modal" class="modalInfo">
+        <div class="modal-content-Info">
+            <span class="closeInfo" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+
+
+    <script src="script.js"></script>
 </body>
 </html>

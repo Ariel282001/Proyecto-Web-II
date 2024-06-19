@@ -77,3 +77,90 @@ document.addEventListener('DOMContentLoaded', function() {
         requestAnimationFrame(animate);
     }
 });
+
+
+
+
+
+
+
+
+
+/*MODAL*/
+// Variables globales para el carrito
+let cartItems = [];
+let cartTotal = 0;
+
+// Función para agregar un producto al carrito
+function addToCart(productName, productPrice) {
+    cartItems.push({ name: productName, price: productPrice });
+    cartTotal += productPrice;
+    renderCart();
+
+    // Mostrar mensaje de alerta
+    alert(`Se agregó "${productName}" al carrito.`);
+}
+
+// Función para vaciar el carrito
+function clearCart() {
+    cartItems = [];
+    cartTotal = 0;
+    renderCart();
+}
+
+// Función para renderizar el carrito
+function renderCart() {
+    const cartList = document.getElementById('cart-items');
+    cartList.innerHTML = '';
+    cartItems.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - $${item.price}`;
+        cartList.appendChild(li);
+    });
+    document.getElementById('cart-total').textContent = `$${cartTotal}`;
+
+    // Mostrar el modal del carrito al agregar un producto
+    /*document.getElementById('cart-modal').style.right = '0';*/
+}
+
+// Función para cerrar el modal
+document.getElementsByClassName('close')[0].addEventListener('click', function() {
+    document.getElementById('cart-modal').style.right = '-400px';
+});
+
+// Función para abrir el modal al hacer clic en "Abrir Carrito"
+document.getElementById('open-cart').addEventListener('click', function() {
+    document.getElementById('cart-modal').style.right = '0';
+});
+
+
+
+
+
+
+/*MODAL DE MOSTRAR INFO DE PRODCUTOS*/
+// Función para abrir el modal y mostrar la descripción del producto
+function openModal(title, description) {
+    const modal = document.getElementById('producto-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
+    
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
+    
+    modal.style.display = 'flex'; // Mostrar el modal
+}
+
+// Función para cerrar el modal
+function closeModal() {
+    const modal = document.getElementById('producto-modal');
+    modal.style.display = 'none'; // Ocultar el modal
+}
+
+// Cerrar modal haciendo clic fuera del contenido
+window.onclick = function(event) {
+    const modal = document.getElementById('producto-modal');
+    if (event.target == modal) {
+        modal.style.display = 'none'; // Ocultar el modal si se hace clic fuera de él
+    }
+}
